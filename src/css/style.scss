@@ -1,0 +1,106 @@
+@import "reset";
+
+/*Header 영역*/
+.header{
+    position: relative;
+    padding:18px 5%;
+    .logo{
+        float:left;
+        a{
+            font-size:26px; color:#3f51b5;
+            font-weight: normal;
+        }
+    }
+    .gnb{
+        display: none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#3f51b5;
+        li{
+            border-bottom: 1px solid #303f9f;
+            a{
+                display: block;
+                padding: 14px 0 14px 5%;
+                font-size: 14px;
+                color:#fff;
+            }
+        }
+    }
+    .menu-toggle-btn{
+        float: right;
+        width: 20px;
+        margin-top: 4px;
+        cursor: pointer;
+        span{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background:#3f51b5;
+        }
+        span:nth-child(2){
+            margin:5px 0;
+        }
+    }
+}
+
+/*Footer 영역*/
+.footer{
+    margin-top:104px;
+    iframe{
+        width: 100%;
+        height:320px;
+    }
+    p{
+        margin:21px 0;
+        color:#3f51b5;
+        text-align: center;
+
+    }
+}
+
+.container{
+    width:90%;
+    max-width:1132px;
+    margin:0 auto;
+}
+
+.cfixed:after, .container:after{ /*float은 쓰지 말것*/ 
+    display: block;
+    content:"";
+    clear:both;
+}
+.blind{
+    position:absolute;
+    width:0;
+    height:0;
+    line-height: 0;
+    text-indent:-9999px;
+    overflow: hidden;
+}
+
+.sec-tit{
+    font-size:42px;
+    color:#3f51b5;
+    font-weight: normal;
+
+}
+
+.divider{
+    width:90%;
+    max-width: 1132px;
+    margin:0 auto;
+    margin-top:77px;
+    background:#3f51b5;
+}
+
+/*슬라이더 영역 css*/
+.slider{
+    img{
+        display:block;
+        width:100%;
+        max-width:100%;
+        height:auto;
+    }
+}
