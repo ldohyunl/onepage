@@ -94,6 +94,11 @@
     margin-top:77px;
     background:#3f51b5;
 }
+.m-divider{
+    width:20px; margin:0 auto;
+    margin-top:77px; background: #3f51d5;
+}
+
 
 /*슬라이더 영역 css*/
 .slider{
@@ -102,5 +107,379 @@
         width:100%;
         max-width:100%;
         height:auto;
+    }
+}
+
+
+/*디스플레이 영역 css*/
+.display-section{
+    margin-top:59px;
+    text-align:center;
+    .sec-tit{
+        margin-bottom: 30px;
+    .desc{
+        font-family: "PT serif";
+        color: #616161;
+        line-height: 1.9;
+        }
+    }
+}
+
+.promotion-section{
+    margin-top:68px;
+    .promo-list{
+        li{ 
+            
+            margin-top:56px;
+            text-align:center;
+            img{
+                height:52px;
+            }
+            h3{
+                margin:29px 0 20px 0;
+                color:#3f51b5;
+                font-weight: normal;
+            }
+            p{
+                font-size:14px;
+                font-family:"RT serif";
+                color:#616161;
+                line-height:1.5;
+            }
+        }
+        li:first-child{
+            margin-top:0;
+
+        }
+    }
+}
+
+.work-section{
+    margin-top:73px;
+    .sec-tit{
+        width: 90%;
+        max-width: 1132px;
+        margin:0 auto; // 가운데 정렬
+        margin-bottom:47px;
+        text-align:center;
+    }
+    .work-list{
+        li{
+            width:100%;
+            img{
+                display: block;
+                width:100%;
+                max-width:100%;
+                height:auto;
+
+            }
+            a{
+                display:block;
+                position:relative;
+                width:100%;
+                height:100%;
+            }
+            a:before{
+                display:block;
+                position:absolute;
+                top:0; left:0;
+                z-index:10;
+                width:100%;
+                height: 100%;
+                background-color:#3f51d5;
+                content:"";
+                opacity:0;
+                transition:all 0.2s;
+            }
+            a:hover:before{
+                opacity:0.86;
+            }
+            .info{
+                position:absolute;
+                top:0; left:23;
+                z-index:20;
+                opacity:0;
+                transition:all 0.3s;
+                h3{
+                    margin-bottom:8px;
+                    font-size:23px;
+                    color:#fff;
+                    font-weight: normal;
+                }
+                span{
+                    font-size:11px;
+                    color:#fff;
+
+                }
+            }
+            a:hover{
+                .info{
+                    transform:translate(23px);
+                    opacity:1;
+
+                }
+            }
+        }
+    }
+}
+
+.blog-section{
+    margin-top:77px;
+    .sec-titz{
+        margin-bottom: 47px;
+        text-align: center;
+    }
+    .blog-list{
+        li{
+            width:100%;
+            margin-top:45px;
+            img{
+                display:block;
+                width: 100%;
+                max-width:100%;
+                height: auto;
+                
+            }
+            time{
+                display: block;
+                margin:11px 0 10px 0;
+                font-size:11px;
+                color:#9e9e9e
+            }
+            h3{
+                color: #424242;
+                font-weight:normal;
+                line-height:1.6;
+            }
+        }
+        li:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+/*연락처 영역*/
+.contact-section{
+    margin-top:109px;
+    .sec-tit{
+        margin-bottom:47px;
+        text-align: center;
+    }
+    .form-box{
+        .form{
+            input{
+                padding-bottom:13px;
+                margin-bottom: 38px;
+            }
+        }
+        .textarea{
+            textarea{
+                height:165px;
+            }
+        }
+        .send-btn{
+            margin-top:36px;
+            text-align:right;
+            button{
+                padding:15px;
+                margin:0;
+                border:0;
+                font-size: 12px;
+                color:#fff;
+                background: #3f51b5;
+                font-family: "Montserrat";
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+/*테블릿용 css*/
+@media all and (min-width:768px){//
+    .divider{margin-top:124px;}
+    .m-divider{margin-top:124px;}
+    .header{
+        position:static; padding:28px 56px;
+        .gnb{
+            position: static; //차례대로
+            display: block !important;
+            float:right; 
+            width:auto;
+            margin-top: 6px;
+            background:none;
+         
+            li{
+                float: left; margin-left: 21px; border-bottom: 0;
+                a{
+                    padding:0; font-size: 16px; color:#3f51b5
+                }
+            }
+        }
+        .menu-toggle-btn{
+            display:none !important;
+        }
+    }
+    .display-section{margin-top: 95px;}
+    .promotion-section{
+        margin-top:110px;
+        .promo-list{
+            li{
+                float:left;
+                width:23.046875% ;/*177px / 768px */
+                margin-left:2.604166666666667% ;/*20px / 1068px*/
+                margin-top:0;
+            }
+            li:first-child{//4명중에 3명만 간격을 두면 되므로 첫번째간격을 없앱
+                margin-left:0;
+            }
+
+        }
+    }
+    .work-section{
+        margin-top:118px;
+        .sec-tit{
+            margin-bottom:76px;
+        }
+        .work-list{
+            li{
+                float:left;
+                width:50%;
+                .info{
+                    left:37px;
+                }
+                a:hover .info{
+                    transform:translateY(37px);
+                }
+            }
+        }
+ 
+    }
+
+    .blog-section{
+        margin-top:124px;
+        .sec-tit{
+            margin-bottom:76px;
+        }
+        .blog-list{
+            li{
+                float:left;
+                width:31.5972222222222%;
+                margin-left:2.604166666666667%;
+                margin-top:0;
+            }
+            li:first-child{
+                margin-left:0;
+            }
+        }
+    }
+    .contact-section{
+        margin-top: 176px;
+        .sec-tit{
+            margin-bottom:76px;
+        }
+        .form-box{
+            .from{
+                float:left;
+                width:48.69791666666667%;
+                margin-right:2.604166666666667%;
+                input:last-child{
+                    margin-bottom:0;
+                }
+            }
+            .textarea{
+                float:left;
+                width:48.69791666666667%;
+            }
+        }
+    }
+    .footer{
+        iframe{
+            height:432px;
+        }
+        p{
+            margin:34px 0;
+        }
+    }
+
+
+}//tablet end
+
+
+/*pc 버전*/
+@media all and (min-width:1132px){
+    .display-section{
+        text-align:left;
+        .sec-tit{
+            float:left;
+            margin-bottom:0;
+        }
+        .desc{
+            position:relative;
+            float:right;
+            padding-left:20px;
+            font-family: "PT Serif";
+            color:#616161;
+            line-height:1.9;
+        }
+        .desc:before{
+            display:block;
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 2px;
+            height: 44px;
+            background: #e0e0e0;
+            content:"";
+        }
+    }
+    .promotion-section{
+        .promo-list{
+            li{
+                width:23.67491166077739%;
+                margin-left:1.76678445229682%;
+            }
+        }
+    }
+    .work-section{
+        .sec-tit{
+            text-align:left;
+
+        }
+        .work-list{
+            li{
+                width:25%;
+            }
+        }
+    }
+    .blog-section{
+        .sec-tit{
+            float:left;
+            margin-bottom:0;
+        }
+        .blog-list{
+            float:right;
+            width:74.5583038869258%;
+            li{
+                width:31.75355450236967%;
+                margin-left:2.369668246445498%;
+            }
+        }
+    }
+    .contact-section{
+        .sec-tit{
+            float:left;
+            margin-bottom:0;
+        }
+        .form-box{
+            float:right;
+            width:74.5583038869258%;
+            .form{
+                width:48.81516587677725%;
+                margin-right:2.369668246445498%;
+            }
+            .textarea{
+                width:48.81516587677725%;    
+            }
+        }
     }
 }
